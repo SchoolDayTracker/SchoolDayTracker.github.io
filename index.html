@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>School Day Tracker</title>
+        
+    </head>
+    <body background="background.png">
+        <script>
+            document.write('dont close the tab it will not save')
+        </script>
+        <script>
+            function save() {
+                var tahi1 = document.getElementById("tahi1").value;
+                var rua1 = document.getElementById("rua1").value;
+                var toru1 = document.getElementById("toru1").value;
+                var wha1 = document.getElementById("wha1").value;
+                var rima1 = document.getElementById("rima1").value;
+                var ono1 = document.getElementById("ono1").value;
+                var tahi2 = document.getElementById("tahi2").value;
+                var rua2 = document.getElementById("rua2").value;
+                var toru2 = document.getElementById("toru2").value;
+                var wha2 = document.getElementById("wha2").value;
+                var rima2 = document.getElementById("rima2").value;
+                var ono2 = document.getElementById("ono2").value;
+                var tahi3 = document.getElementById("tahi3").value;
+                var rua3 = document.getElementById("rua3").value;
+                var toru3 = document.getElementById("toru3").value;
+                var wha3 = document.getElementById("wha3").value;
+                var rima3 = document.getElementById("rima3").value;
+                var ono3 = document.getElementById("ono3").value;
+                var tahi4 = document.getElementById("tahi4").value;
+                var rua4 = document.getElementById("rua4").value;
+                var toru4 = document.getElementById("toru4").value;
+                var wha4 = document.getElementById("wha4").value;
+                var rima4 = document.getElementById("rima4").value;
+                var ono4 = document.getElementById("ono4").value;
+                var tahi5 = document.getElementById("tahi5").value;
+                var rua5 = document.getElementById("rua5").value;
+                var toru5 = document.getElementById("toru5").value;
+                var wha5 = document.getElementById("wha5").value;
+                var rima5 = document.getElementById("rima5").value;
+                var ono5 = document.getElementById("ono5").value;
+                const timecookie = [tahi1, rua1, toru1, wha1, rima1, ono1, tahi2, rua2, toru3, wha2, rima2, ono2, tahi3, rua3, toru3, wha3, rima3, ono3, tahi4, rua4, toru4, wha4, rima4, ono4, tahi5, rua5, toru5, wha5, rima5, ono5];
+            }
+            function cookie(timecookie) {
+                document.cookie = "timecookie =" + timecookie";";
+            }
+        </script>
+        <h1 id="displayDay" class=center></h1>
+        <div class=center>
+            <button id="mins" type="button" onclick="">-</button>
+            <button id="plus" type="button" onclick="">+</button>
+        </div>
+        <div class="center timetable">
+            <div class="days">
+                <span class="white down">
+                    <p class=tahi>Tahi</p>
+                    <p class=rua>Rua</p>
+                    <p class=toru>Toru</p>
+                    <p class=wha>Whā</p>
+                    <p class=rima>Rima</p>
+                    <p class=ono>Ono</p>
+                </span>
+            </div>
+            <div>
+                <span class=blue>
+                    <p class=period>Whānau</p>
+                    <div class=period>
+                        <p class=pad3></p>
+                    </div>
+                </span>
+            </div>
+            <div class="">
+                <span class="white down">
+                    <p class="period">period 1</p>
+                    <input id=tahi1 class=in style= "width: 54px">
+                    <input id=rua1 class=in style= "width: 56px">
+                    <input id=toru1 class=in style= "width: 54px">
+                    <input id=wha1 class=in style= "width: 55px">
+                    <input id=rima1 class=in style= "width: 54px">
+                    <input id=ono1 class=in style= "width: 55px">
+                </span>
+            </div>
+            <div>
+                <span class="white down">
+                    <p class=period>period 2</p>
+                    <input id=tahi2 class=in style= "width: 54px">
+                    <input id=rua2 class=in style= "width: 56px">
+                    <input id=toru2 class=in style= "width: 54px">
+                    <input id=wha2 class=in style= "width: 55px">
+                    <input id=rima2 class=in style= "width: 54px">
+                    <input id=ono2 class=in style= "width: 55px">
+                </span>
+            </div>
+            <div>
+                <span class=blue>
+                    <p class=period>interval</p>
+                    <div class=period>
+                        <p class=pad></p>
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span class="white down">
+                    <p class=period>period 3</p>
+                    <input id=tahi3 class=in style= "width: 54px">
+                    <input id=rua3 class=in style= "width: 56px">
+                    <input id=toru3 class=in style= "width: 54px">
+                    <input id=wha3 class=in style= "width: 55px">
+                    <input id=rima3 class=in style= "width: 54px">
+                    <input id=ono3 class=in style= "width: 55px">
+                </span>
+            </div>
+            <div>
+                <span class="white down">
+                    <p class=period>period 4</p>
+                    <input id=tahi4 class=in style= "width: 54px">
+                    <input id=rua4 class=in style= "width: 56px">
+                    <input id=toru4 class=in style= "width: 54px">
+                    <input id=wha4 class=in style= "width: 55px">
+                    <input id=rima4 class=in style= "width: 54px">
+                    <input id=ono4 class=in style= "width: 55px">
+                </span>
+            </div>
+            <div>
+                <span class=blue>
+                    <p class=period>lunch</p>
+                    <p class="pad2 period"></p>
+                </span>
+            </div>
+            <div>
+                <span class="white down">
+                    <p class=period>period 5</p>
+                    <input id=tahi5 class=in style= "width: 54px">
+                    <input id=rua5 class=in style= "width: 56px">
+                    <input id=toru5 class=in style= "width: 54px">
+                    <input id=wha5 class=in style= "width: 55px">
+                    <input id=rima5 class=in style= "width: 54px">
+                    <input id=ono5 class=in style= "width: 55px">
+                </span>
+            </div>
+            <div>
+                <button id="save" type="button" onclick="save(), cookie(timecookie)">save</button>
+            </div>
+        </div>
+        <script>
+            const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
+            let numb;
+            numb = 1;
+            var user;
+            let day = days[numb];
+            const plus = document.getElementById('plus');
+            const mins = document.getElementById('mins');
+            const h1 = document.getElementById('displayDay');
+            h1.innerHTML = '<h1>'+day+'</h1>';
+            function add() {
+                numb++;
+                if (numb == 7){
+                    numb = 1
+                }
+                let day = days[numb];
+                h1.innerHTML = '<h1>'+day+'</h1>';
+            }
+            function sub() {
+                numb--;
+                if (numb == 0){
+                    numb = 6;
+                }
+                let day = days[numb];
+                h1.innerHTML = '<h1>'+day+'</h1>';
+            }
+            plus.addEventListener('click', add);
+            mins.addEventListener('click', sub);
+        </script>
+    </body>
+</html>
