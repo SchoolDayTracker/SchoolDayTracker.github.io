@@ -10,6 +10,8 @@
             document.write('dont close the tab it will not save')
         </script>
         <script>
+            let cookies = document.cookie.split(';');
+            console.log(cookies[1])
             function save() {
                 var tahi1 = document.getElementById("tahi1").value;
                 document.cookie = "tahi1 =" + tahi1 + ";";
