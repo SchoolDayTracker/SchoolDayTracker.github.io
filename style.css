@@ -83,3 +83,6 @@ button {
 a {
     font-size: 13pt;
 }
+input {
+    text-align: center;
+}
