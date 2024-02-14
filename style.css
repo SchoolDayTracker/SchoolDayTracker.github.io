@@ -4,6 +4,14 @@
     margin-right: auto;
     text-align: center;
 }
+.bottomleft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.bluetext {
+    color: blue;
+}
 .pad {
     margin-left: 300pt;
 }
@@ -71,4 +79,7 @@ button {
 }
 .down {
     margin-bottom: 10pt;
+}
+a {
+    font-size: 13pt;
 }
