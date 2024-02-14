@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!--schoolDayTracker created on 3/02/24-->
+<!--schoolDayTracker created on 3/02/2024-->
+<!--v0.1.0 releced on 13/02/2024-->
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -78,7 +79,9 @@
             <button id="mins" type="button" onclick="">-</button>
             <button id="plus" type="button" onclick="">+</button>
         </div>
+        <!--timetable starts-->
         <div class="center timetable">
+            <!--days-->
             <div class="days">
                 <span class="white down">
                     <p class=tahi>Tahi</p>
@@ -89,6 +92,7 @@
                     <p class=ono>Ono</p>
                 </span>
             </div>
+            <!--Whānau time-->
             <div>
                 <span class=blue>
                     <p class=period>Whānau</p>
@@ -97,7 +101,8 @@
                     </div>
                 </span>
             </div>
-            <div class="">
+            <!--period 1-->
+            <div>
                 <span class="white down">
                     <p class="period">period 1</p>
                     <input id='tahi1' class=in style="width: 54px">
@@ -108,6 +113,7 @@
                     <input id=ono1 class=in style= "width: 55px">
                 </span>
             </div>
+            <!--period 2-->
             <div>
                 <span class="white down">
                     <p class=period>period 2</p>
@@ -119,6 +125,7 @@
                     <input id=ono2 class=in style= "width: 55px">
                 </span>
             </div>
+            <!--interval-->
             <div>
                 <span class=blue>
                     <p class=period>interval</p>
@@ -127,6 +134,7 @@
                     </div>
                 </span>
             </div>
+            <!--period 3-->
             <div>
                 <span class="white down">
                     <p class=period>period 3</p>
@@ -138,6 +146,7 @@
                     <input id=ono3 class=in style= "width: 55px">
                 </span>
             </div>
+            <!--period 4-->
             <div>
                 <span class="white down">
                     <p class=period>period 4</p>
@@ -149,12 +158,14 @@
                     <input id=ono4 class=in style= "width: 55px">
                 </span>
             </div>
+            <!--lunch-->
             <div>
                 <span class=blue>
                     <p class=period>lunch</p>
                     <p class="pad2 period"></p>
                 </span>
             </div>
+            <!--period 5-->
             <div>
                 <span class="white down">
                     <p class=period>period 5</p>
@@ -166,11 +177,14 @@
                     <input id=ono5 class=in style= "width: 55px">
                 </span>
             </div>
+            <!--save button-->
             <div>
                 <button id="save" type="button" onclick="save()">save</button>
             </div>
         </div>
-        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" class="bottomleft bluetext">report bugs to the Github</a>
+        <!--timetable ends-->
+        <!--Github link-->
+        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" class="bottomleft bluetext">Report bugs to the Github</a>
         <!--day cycleing script-->
         <script>
             const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
