@@ -4,6 +4,9 @@
     margin-right: auto;
     text-align: center;
 }
+body {
+    background-size: cover;
+}
 .bottomleft {
     position: fixed;
     bottom: 0;
