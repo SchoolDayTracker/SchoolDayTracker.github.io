@@ -11,3 +11,6 @@ v0.1.2 beta
 
 v0.1.3 beta
 -made the image fit the screen
+
+v0.1.4 beta
+-added time to the time table
