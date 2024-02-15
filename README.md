@@ -8,3 +8,6 @@ v0.1.1 beta
 
 v0.1.2 beta
 -added a page icon
+
+v0.1.3 beta
+-made the image fit the screen
