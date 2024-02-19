@@ -3,7 +3,6 @@
 <!--v0.1.0 releced on 13/02/2024-->
 <html lang="en">
     <head>
-        <script src=shrek.js></script>
         <link rel="icon" href="logo.ico" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>School Day Tracker</title>
@@ -195,15 +194,40 @@
                 <button id="save" type="button" onclick="save()">save</button>
             </div>
         </div>
+        
         <!--timetable ends-->
         <!--Github link-->
         <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" class="bottomleft bluetext">Report bugs to the Github</a>
         <!--day cycleing script-->
         <script>
             const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
-            let numb;
-            numb = 1;
-            var user;
+            // this is PAIN
+            // so much interal screaming
+            // i think i got this to work but as i say that there will likely be a bug and ill have to redo it all
+            var old = new Date("2024-02-11 00:00")
+            var today = new Date();
+            console.log(Math.floor((today - old) / 1000 / 60 / 60 / 24 ) + " day(s) ago");
+            var daysago = (Math.floor((today - old) / 1000 / 60 / 60 / 24 ));
+            let weekends = (Math.floor(daysago / 7));
+            let numb = 1;
+            let a = 1;
+            while (a == 1) {
+                if (weekends == 0){
+                    break;
+                }
+                weekends = weekends - 1;
+                daysago = daysago - 2;
+            }
+            // update on holladays
+            daysago = daysago - 0;
+            numb = numb - 1;
+            for (let i = 0; i < daysago; i++) {
+                numb = numb + 1;
+                if (numb == 7) {
+                    numb = 1;
+                }
+            }
+            // this is where the PAIN ends
             let day = days[numb];
             const plus = document.getElementById('plus');
             const mins = document.getElementById('mins');
