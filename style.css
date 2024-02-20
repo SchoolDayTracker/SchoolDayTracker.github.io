@@ -4,6 +4,12 @@
     margin-right: auto;
     text-align: center;
 }
+.ponepix {
+    margin-right: 1pt;
+}
+.monepix {
+    margin-left: -1pt;
+}
 body {
     background-size: cover;
 }
