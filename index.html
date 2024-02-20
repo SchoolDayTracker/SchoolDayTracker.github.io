@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--schoolDayTracker created on 3/02/2024-->
+<!--SchoolDayTracker created on 3/02/2024-->
 <!--v0.1.0 releced on 13/02/2024-->
 <html lang="en">
     <head>
@@ -12,66 +12,28 @@
         <script>
             let cookies = document.cookie.split(';');
             function save() {
-                var tahi1 = document.getElementById("tahi1").value;
-                document.cookie = "tahi1 =" + tahi1 + ";";
-                var rua1 = document.getElementById("rua1").value;
-                document.cookie = "rua1 =" + rua1 + ";";
-                var toru1 = document.getElementById("toru1").value;
-                document.cookie = "toru1 =" + toru1 + ";";
-                var wha1 = document.getElementById("wha1").value;
-                document.cookie = "wha1 =" + wha1 + ";";
-                var rima1 = document.getElementById("rima1").value;
-                document.cookie = "rima1 =" + rima1 + ";";
-                var ono1 = document.getElementById("ono1").value;
-                document.cookie = "ono1 =" + ono1 + ";";
-                var tahi2 = document.getElementById("tahi2").value;
-                document.cookie = "tahi2 =" + tahi2 + ";";
-                var rua2 = document.getElementById("rua2").value;
-                document.cookie = "rua2 =" + rua2 + ";";
-                var toru2 = document.getElementById("toru2").value;
-                document.cookie = "toru2 =" + toru2 + ";";
-                var wha2 = document.getElementById("wha2").value;
-                document.cookie = "wha2 =" + wha2 + ";";
-                var rima2 = document.getElementById("rima2").value;
-                document.cookie = "rima2 =" + rima2 + ";";
-                var ono2 = document.getElementById("ono2").value;
-                document.cookie = "ono2 =" + ono2 + ";";
-                var tahi3 = document.getElementById("tahi3").value;
-                document.cookie = "tahi3 =" + tahi3 + ";";
-                var rua3 = document.getElementById("rua3").value;
-                document.cookie = "rua3 =" + rua3 + ";";
-                var toru3 = document.getElementById("toru3").value;
-                document.cookie = "toru3 =" + toru3 + ";";
-                var wha3 = document.getElementById("wha3").value;
-                document.cookie = "wha3 =" + wha3 + ";";
-                var rima3 = document.getElementById("rima3").value;
-                document.cookie = "rima3 =" + rima3 + ";";
-                var ono3 = document.getElementById("ono3").value;
-                document.cookie = "ono3 =" + ono3 + ";";
-                var tahi4 = document.getElementById("tahi4").value;
-                document.cookie = "tahi4 =" + tahi4 + ";";
-                var rua4 = document.getElementById("rua4").value;
-                document.cookie = "rua4 =" + rua4 + ";";
-                var toru4 = document.getElementById("toru4").value;
-                document.cookie = "toru4 =" + toru4 + ";";
-                var wha4 = document.getElementById("wha4").value;
-                document.cookie = "wha4 =" + wha4 + ";";
-                var rima4 = document.getElementById("rima4").value;
-                document.cookie = "rima4 =" + rima4 + ";";
-                var ono4 = document.getElementById("ono4").value;
-                document.cookie = "ono4 =" + ono4 + ";";
-                var tahi5 = document.getElementById("tahi5").value;
-                document.cookie = "tahi5 =" + tahi5 + ";";
-                var rua5 = document.getElementById("rua5").value;
-                document.cookie = "rua5 =" + rua5 + ";";
-                var toru5 = document.getElementById("toru5").value;
-                document.cookie = "toru5 =" + toru5 + ";";
-                var wha5 = document.getElementById("wha5").value;
-                document.cookie = "wha5 =" + wha5 + ";";
-                var rima5 = document.getElementById("rima5").value;
-                document.cookie = "rima5 =" + rima5 + ";";
-                var ono5 = document.getElementById("ono5").value;
-                document.cookie = "ono5 =" + ono5 + ";";
+                let cookiebaker
+                const tahitoono = ["null","tahi","rua","toru","wha","rima","ono"];
+                const onetosix = ["null","1","2","3","4","5","6"];
+                let numb1 = 1;
+                let numb2 = 1;
+                let counter = 0;
+                for (let i = 0; i < 30; i++) {
+                    cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
+                    document.cookie = tahitoono[numb1] + "=" + onetosix[numb2] + ";";
+                    numb1++
+                    counter++
+                    if (numb1 == 7) {
+                        numb1 = 1;
+                    }
+                    if (counter == 6) {
+                        counter = 0;
+                        numb2++
+                        if (numb2 == 7) {
+                            i = 30
+                        }
+                    }
+                }
             }
         </script>
         <!--this is where the body really starts-->
