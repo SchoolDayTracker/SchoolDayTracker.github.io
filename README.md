@@ -17,3 +17,6 @@ v0.1.4 beta
 
 v0.1.5 beta
 +added day tracking to the day tracker 
+
+v0.1.6 beta
++added a link to the school news page
