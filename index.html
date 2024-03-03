@@ -8,6 +8,10 @@
         <title>School Day Tracker</title>
     </head>
     <body background="background.png">
+        <!--menu-->
+        <div id=menu>
+            <a href="https://darfield.school.nz/news/"><img src="news.jpg" height="30"></a>
+        </div>
         <!--how the timetable is saved-->
         <script>
             let cookies = document.cookie.split(';');
@@ -38,10 +42,6 @@
         </script>
         <!--this is where the body really starts-->
         <h1 id="displayDay" class=center></h1>
-        <div class=center>
-            <button id="mins" type="button" onclick="">-</button>
-            <button id="plus" type="button" onclick="">+</button>
-        </div>
         <!--timetable starts-->
         <div class="center timetable">
             <!--days-->
@@ -194,27 +194,20 @@
             const mins = document.getElementById('mins');
             const h1 = document.getElementById('displayDay');
             h1.innerHTML = '<h1>'+day+'</h1>';
-            function add() {
-                numb++;
-                if (numb == 7){
-                    numb = 1
-                }
-                let day = days[numb];
-                h1.innerHTML = '<h1>'+day+'</h1>';
-            }
-            function sub() {
-                numb--;
-                if (numb == 0){
-                    numb = 6;
-                }
-                let day = days[numb];
-                h1.innerHTML = '<h1>'+day+'</h1>';
-            }
-            plus.addEventListener('click', add);
-            mins.addEventListener('click', sub);
         </script>
         <!--load timetable script-->
         <script>
+            let cookieloader;
+            let counter = 1;
+            const numb1to6m = ["null","tahi","rua","toru","wha","rima","ono"];
+            for (let i = 0; i < 30; i++) {
+                cookieloader = cookies[i].replace(numb1to6m[counter] + "=","");
+                document.getElementById(numb1to6m);
+                counter++;
+                if (counter == 7) {
+                    counter = 1;
+                }
+            }
             let cookies0 = cookies[0].replace("tahi1=","");
             document.getElementById('tahi1').value = cookies0;
             let cookies1 = cookies[1].replace("rua1=","");
