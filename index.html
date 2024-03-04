@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--SchoolDayTracker created on 3/02/2024-->
+<!--v0.1.0 releced on 13/02/2024-->
+<html lang="en">
+    <head>
+        <!--icon-->
+        <link rel="icon" href="logo.ico" type="image/x-icon"/>
+        <!--style sheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--title-->
+        <title>School Day Tracker</title>
+    </head>
+    <body>
+        <!--news-->
+        <div id=menu>
+            <a href="https://darfield.school.nz/news/#" target="_blank"><img src="news.jpg" height="30" alt="news"></a>
+        </div>
+        <!--how the timetable is saved-->
+        <script>
+            let cookies = document.cookie.split(';');
+            function save() {
+                let cookiebaker
+                const tahitoono = ["null","tahi","rua","toru","wha","rima","ono"];
+                const onetosix = ["null","1","2","3","4","5","6"];
+                let numb1 = 1;
+                let numb2 = 1;
+                let counter = 0;
+                for (let i = 0; i < 30; i++) {
+                    cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
+                    document.cookie = tahitoono[numb1] + "=" + onetosix[numb2] + ";";
+                    numb1++
+                    counter++
+                    if (numb1 == 7) {
+                        numb1 = 1;
+                    }
+                    if (counter == 6) {
+                        counter = 0;
+                        numb2++
+                        if (numb2 == 7) {
+                            i = 30
+                        }
+                    }
+                }
+            }
+        </script>
+        <!--this it the day text-->
+        <h1 id="displayDay" class=center></h1>
+        <!--timetable starts-->
+        <div class="center timetable">
+            <!--days-->
+            <div>
+                <span class="white down">
+                    <p class=tahi>Tahi</p>
+                    <p class=rua>Rua</p>
+                    <p class=toru>Toru</p>
+                    <p class=wha>Whā</p>
+                    <p class=rima>Rima</p>
+                    <p class=ono>Ono</p>
+                </span>
+            </div>
+            <!--Whānau time-->
+            <div>
+                <span class=blue>
+                    <p class=period>Whānau</p>
+                    <div class=period>
+                        <p class="pad3 period"></p>
+                        <p class="period in">8:45am</p>
+                    </div>
+                </span>
+            </div>
+            <!--period 1-->
+            <div>
+                <span class="white down">
+                    <p class="period">period 1</p>
+                    <input id='tahi1' class=in value='' style="width: 54px">
+                    <input id='rua1' class=in value='' style= "width: 56px">
+                    <input id=toru1 class=in value='' style= "width: 54px">
+                    <input id=wha1 class=in value='' style= "width: 55px">
+                    <input id=rima1 class=in value='' style= "width: 54px">
+                    <input id=ono1 class=in value='' style= "width: 55px">
+                    <p class="period in increse"></p>
+                    <p class="period in">9:00am</p>
+                </span>
+            </div>
+            <!--period 2-->
+            <div>
+                <span class="white down">
+                    <p class=period>period 2</p>
+                    <input id=tahi2 class=in value='' style= "width: 54px">
+                    <input id=rua2 class=in value='' style= "width: 56px">
+                    <input id=toru2 class=in value='' style= "width: 54px">
+                    <input id=wha2 class=in value='' style= "width: 55px">
+                    <input id=rima2 class=in value='' style= "width: 54px">
+                    <input id=ono2 class=in value='' style= "width: 55px">
+                    <p class="period in">10:05am</p>
+                </span>
+            </div>
+            <!--interval-->
+            <div>
+                <span class=blue>
+                    <p class=period>interval</p>
+                    <div class=period>
+                        <p class="pad period"></p>
+                        <p class="period in">11:10am</p>
+                    </div>
+                </span>
+            </div>
+            <!--period 3-->
+            <div>
+                <span class="white down">
+                    <p class=period>period 3</p>
+                    <input id=tahi3 class=in value='' style= "width: 54px">
+                    <input id=rua3 class=in value='' style= "width: 56px">
+                    <input id=toru3 class=in value='' style= "width: 54px">
+                    <input id=wha3 class=in value='' style= "width: 55px">
+                    <input id=rima3 class=in value='' style= "width: 54px">
+                    <input id=ono3 class=in value='' style= "width: 55px">
+                    <p class="period in">11:30am</p>
+                </span>
+            </div>
+            <!--period 4-->
+            <div>
+                <span class="white down">
+                    <p class="period ponepix">period 4</p>
+                    <input id=tahi4 class=in value='' style= "width: 54px">
+                    <input id=rua4 class=in value='' style= "width: 56px">
+                    <input id=toru4 class=in value='' style= "width: 54px">
+                    <input id=wha4 class=in value='' style= "width: 55px">
+                    <input id=rima4 class=in value='' style= "width: 54px">
+                    <input id=ono4 class=in value='' style= "width: 55px">
+                    <p class="period in monepix">12:35pm</p>
+                </span>
+            </div>
+            <!--lunch-->
+            <div>
+                <span class=blue>
+                    <p class=period>lunch</p>
+                    <p class="pad2 period"></p>
+                    <p class="period in increse"></p>
+                    <p class="period in">1:35pm</p>
+                </span>
+            </div>
+            <!--period 5-->
+            <div>
+                <span class="white down">
+                    <p class=period>period 5</p>
+                    <input id=tahi5 class=in value='' style= "width: 54px">
+                    <input id=rua5 class=in value='' style= "width: 56px">
+                    <input id=toru5 class=in value='' style= "width: 54px">
+                    <input id=wha5 class=in value='' style= "width: 55px">
+                    <input id=rima5 class=in value='' style= "width: 54px">
+                    <input id=ono5 class=in value='' style= "width: 55px">
+                    <p class="period in increse"></p>
+                    <p class="period in">2:10pm</p>
+                </span>
+            </div>
+            <!--save button-->
+            <div>
+                <button id="save" type="button" onclick="save()">save</button>
+            </div>
+        </div>
+        <!--timetable ends-->
+        <!--Github link-->
+        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" class="bottomleft bluetext">Report bugs to the Github</a>
+        <!--day cycleing script-->
+        <script>
+            const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
+            // this is PAIN
+            // so much interal screaming
+            // i think i got this to work but as i say that there will likely be a bug and ill have to redo it all
+            var old = new Date("2024-02-11 00:00")
+            var today = new Date();
+            var daysago = (Math.floor((today - old) / 1000 / 60 / 60 / 24 ));
+            let weekends = (Math.floor(daysago / 7));
+            let numb = 1;
+            let a = 1;
+            while (a == 1) {
+                if (weekends == 0){
+                    break;
+                }
+                weekends = weekends - 1;
+                daysago = daysago - 2;
+            }
+            daysago = daysago - 0; // ____CHANGE THIS ON HOLLADAYS____
+            numb = numb - 1;
+            for (let i = 0; i < daysago; i++) {
+                numb = numb + 1;
+                if (numb == 7) {
+                    numb = 1;
+                }
+            }
+            // this is where the PAIN ends
+            let day = days[numb];
+            const plus = document.getElementById('plus');
+            const mins = document.getElementById('mins');
+            const h1 = document.getElementById('displayDay');
+            h1.innerHTML = '<h1>'+day+'</h1>';
+        </script>
+        <!--load timetable script-->
+        <script>
+            let cookieloader;
+            let counter = 1;
+            const numb1to6m = ["null","tahi","rua","toru","wha","rima","ono"];
+            for (let i = 0; i < 30; i++) {
+                cookieloader = cookies[i].replace(numb1to6m[counter] + "=","");
+                document.getElementById(numb1to6m);
+                counter++;
+                if (counter == 7) {
+                    counter = 1;
+                }
+            }
+            let cookies0 = cookies[0].replace("tahi1=","");
+            document.getElementById('tahi1').value = cookies0;
+            let cookies1 = cookies[1].replace("rua1=","");
+            let cookie1 = cookies1.replace(" ","");
+            document.getElementById('rua1').value = cookie1;
+            let cookies2 = cookies[2].replace("toru1=","");
+            let cookie2 = cookies2.replace(" ","");
+            document.getElementById('toru1').value = cookie2;
+            let cookies3 = cookies[3].replace("wha1=","");
+            let cookie3 = cookies3.replace(" ","");
+            document.getElementById('wha1').value = cookie3;
+            let cookies4 = cookies[4].replace("rima1=","");
+            let cookie4 = cookies4.replace(" ","");
+            document.getElementById('rima1').value = cookie4;
+            let cookies5 = cookies[5].replace("ono1=","");
+            let cookie5 = cookies5.replace(" ","");
+            document.getElementById('ono1').value = cookie5;
+            let cookies6 = cookies[6].replace("tahi2=","");
+            let cookie6 = cookies6.replace(" ","");
+            document.getElementById('tahi2').value = cookie6;
+            let cookies7 = cookies[7].replace("rua2=","");
+            let cookie7 = cookies7.replace(" ","");
+            document.getElementById('rua2').value = cookie7;
+            let cookies8 = cookies[8].replace("toru2=","");
+            let cookie8 = cookies8.replace(" ","");
+            document.getElementById('toru2').value = cookie8;
+            let cookies9 = cookies[9].replace("wha2=","");
+            let cookie9 = cookies9.replace(" ","");
+            document.getElementById('wha2').value = cookie9;
+            let cookies10 = cookies[10].replace("rima2=","");
+            let cookie10 = cookies10.replace(" ","");
+            document.getElementById('rima2').value = cookie10;
+            let cookies11 = cookies[11].replace("ono2=","");
+            let cookie11 = cookies11.replace(" ","");
+            document.getElementById('ono2').value = cookie11;
+            let cookies12 = cookies[12].replace("tahi3=","");
+            let cookie12 = cookies12.replace(" ","");
+            document.getElementById('tahi3').value = cookie12;
+            let cookies13 = cookies[13].replace("rua3=","");
+            let cookie13 = cookies13.replace(" ","");
+            document.getElementById('rua3').value = cookie13;
+            let cookies14 = cookies[14].replace("toru3=","");
+            let cookie14 = cookies14.replace(" ","");
+            document.getElementById('toru3').value = cookie14;
+            let cookies15 = cookies[15].replace("wha3=","");
+            let cookie15 = cookies15.replace(" ","");
+            document.getElementById('wha3').value = cookie15;
+            let cookies16 = cookies[16].replace("rima3=","");
+            let cookie16 = cookies16.replace(" ","");
+            document.getElementById('rima3').value = cookie16;
+            let cookies17 = cookies[17].replace("ono3=","");
+            let cookie17 = cookies17.replace(" ","");
+            document.getElementById('ono3').value = cookie17;
+            let cookies18 = cookies[18].replace("tahi4=","");
+            let cookie18 = cookies18.replace(" ","");
+            document.getElementById('tahi4').value = cookie18;
+            let cookies19 = cookies[19].replace("rua4=","");
+            let cookie19 = cookies19.replace(" ","");
+            document.getElementById('rua4').value = cookie19;
+            let cookies20 = cookies[20].replace("toru4=","");
+            let cookie20 = cookies20.replace(" ","");
+            document.getElementById('toru4').value = cookie20;
+            let cookies21 = cookies[21].replace("wha4=","");
+            let cookie21 = cookies21.replace(" ","");
+            document.getElementById('wha4').value = cookie21;
+            let cookies22 = cookies[22].replace("rima4=","");
+            let cookie22 = cookies22.replace(" ","");
+            document.getElementById('rima4').value = cookie22;
+            let cookies23 = cookies[23].replace("ono4=","");
+            let cookie23 = cookies23.replace(" ","");
+            document.getElementById('ono4').value = cookie23;
+            let cookies24 = cookies[24].replace("tahi5=","");
+            let cookie24 = cookies24.replace(" ","");
+            document.getElementById('tahi5').value = cookie24;
+            let cookies25 = cookies[25].replace("rua5=","");
+            let cookie25 = cookies25.replace(" ","");
+            document.getElementById('rua5').value = cookie25;
+            let cookies26 = cookies[26].replace("toru5=","");
+            let cookie26 = cookies26.replace(" ","");
+            document.getElementById('toru5').value = cookie26;
+            let cookies27 = cookies[27].replace("wha5=","");
+            let cookie27 = cookies27.replace(" ","");
+            document.getElementById('wha5').value = cookie27;
+            let cookies28 = cookies[28].replace("rima5=","");
+            let cookie28 = cookies28.replace(" ","");
+            document.getElementById('rima5').value = cookie28;
+            let cookies29 = cookies[29].replace("ono5=","");
+            let cookie29 = cookies29.replace(" ","");
+            document.getElementById('ono5').value = cookie29;
+        </script>
+    </body>
+</html>
