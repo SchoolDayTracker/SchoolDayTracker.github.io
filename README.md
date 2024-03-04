@@ -1,4 +1,4 @@
-Change Log
+<h1>Change Log</h1>
 
 v0.1.0 beta <br>
 +released to beta testers
