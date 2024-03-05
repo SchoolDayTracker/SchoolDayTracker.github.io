@@ -27,15 +27,12 @@
                 for (let i = 0; i < 30; i++) {
                     cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
                     document.cookie = tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
-                    numb1++
+                    numb2++
                     counter++
-                    if (numb1 == 7) {
-                        numb1 = 1;
-                    }
-                    if (counter == 7) {
-                        counter = 1;
-                        numb2++
-                        if (numb2 == 7) {
+                    if (numb2 == 7) {
+                        numb2 = 1;
+                        numb1++
+                        if (numb1 == 7) {
                             break
                         }
                     }
