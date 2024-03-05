@@ -198,17 +198,6 @@
         </script>
         <!--load timetable script-->
         <script>
-            let cookieloader;
-            let counter = 1;
-            const numb1to6m = ["null","tahi","rua","toru","wha","rima","ono"];
-            for (let i = 0; i < 30; i++) {
-                cookieloader = cookies[i].replace(numb1to6m[counter] + "=","");
-                document.getElementById(numb1to6m);
-                counter++;
-                if (counter == 7) {
-                    counter = 1;
-                }
-            }
             let cookies0 = cookies[0].replace("tahi1=","");
             document.getElementById('tahi1').value = cookies0;
             let cookies1 = cookies[1].replace("rua1=","");
