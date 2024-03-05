@@ -23,12 +23,10 @@
                 const onetosix = ["null","1","2","3","4","5","6"];
                 let numb1 = 1;
                 let numb2 = 1;
-                let counter = 1;
                 for (let i = 0; i < 30; i++) {
                     cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
                     document.cookie = tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
                     numb2++
-                    counter++
                     if (numb2 == 7) {
                         numb2 = 1;
                         numb1++
