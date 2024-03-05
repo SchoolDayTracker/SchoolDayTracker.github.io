@@ -17,7 +17,6 @@
         </div>
         <!--how the timetable is saved-->
         <script>
-            let cookies = document.cookie.split(';');
             function save() {
                 let cookiebaker
                 const tahitoono = ["null","tahi","rua","toru","wha","rima","ono"];
@@ -198,6 +197,7 @@
         </script>
         <!--load timetable script-->
         <script>
+            let cookies = document.cookie.split(';');
             let cookies0 = cookies[0].replace("tahi1=","");
             document.getElementById('tahi1').value = cookies0;
             let cookies1 = cookies[1].replace("rua1=","");
