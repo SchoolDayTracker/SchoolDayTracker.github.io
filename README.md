@@ -20,3 +20,7 @@ v0.1.5 beta <br>
 
 v0.1.6 beta <br>
 +added a link to the school news page
+
+v1.0.0 <br>
++fixed a bug that was caused by me trying to make the code cleaner
++relesed to public
