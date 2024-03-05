@@ -1,8 +1,11 @@
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-align: center;
+}
+.timetablecon {
+    height: 22px;
+    width: 520px;
 }
 .ponepix {
     margin-right: 1pt;
@@ -53,42 +56,50 @@ body {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
+    margin-right: 3%;
+    margin-left: 3%
 }
 .rua {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 23pt;
+    margin-left: 3%;
+    margin-right: 2%;
 }
 .toru {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 28pt;
+    margin-left: 5%;
+    margin-right: 3%;
 }
 .wha {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 24pt;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .rima {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 25pt;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .ono {
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 20pt;
+    margin-left: 3%;
+    margin-right: 4%;
 }
 button {
     margin-bottom: 20pt;
 }
 .down {
     margin-bottom: 10pt;
+    margin-top: 0pt;
 }
 a {
     font-size: 13pt;
