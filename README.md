@@ -22,5 +22,9 @@ v0.1.6 beta <br>
 +added a link to the school news page
 
 v1.0.0 <br>
-+fixed a bug that was caused by me trying to make the code cleaner
++fixed a bug that was caused by me trying to make the code cleaner <br>
 +relesed to public
+
+v1.0.1 <br>
++valadated the html and css <br>
++new look for the time table
