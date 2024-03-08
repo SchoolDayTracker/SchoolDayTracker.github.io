@@ -28,3 +28,9 @@ v1.0.0 <br>
 v1.0.1 <br>
 +valadated the html and css <br>
 +new look for the time table
+
+v1.1.0 <br>
++added a new nav bar <br>
++added a help page <br>
++added a link to the notices <br>
++got the current day to be highlighted
