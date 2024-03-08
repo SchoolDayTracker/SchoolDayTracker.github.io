@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <!--SchoolDayTracker created on 3/02/2024-->
-<!--v0.1.0 releced on 13/02/2024-->
+<!--v0.1.0 released on 13/02/2024-->
+<!--v1.0.0 released on 6/03/2024-->
 <html lang="en">
     <head>
         <!--icon-->
-        <link rel="icon" href="logo.ico" type="image/x-icon">
+        <link rel="icon" href="img/logo.ico" type="image/x-icon">
         <!--style sheet-->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!--title-->
         <title>School Day Tracker</title>
     </head>
     <body>
-        <!--news-->
-        <div id=menu>
-            <a href="https://darfield.school.nz/news/" target="_blank"><img src="news.jpg" height="30" alt="news"></a>
+        <!--Nav bar-->
+        <div id=menu class=menu>
+            <a class=notices href="https://darfield.school.nz/news/" target="_blank"><button>News</button></a>
+            <a class=notices href="https://darfield.school.kiwi/index.php/notices" target="_blank"><button>Notices</button></a>
+            <a class=notices href="help.html"><button>Help</button></a>
         </div>
         <!--how the timetable is saved-->
         <script>
@@ -29,9 +32,9 @@
                     numb2++
                     if (numb2 == 6) {
                         numb2 = 1;
-                        numb1++
+                        numb1++;
                         if (numb1 == 7) {
-                            break
+                            break;
                         }
                     }
                 }
@@ -42,111 +45,105 @@
         <!--timetable starts-->
         <div class="center timetable">
             <!--days-->
-            <div>
-                <div class="timetablecon center white">
+            <div class="timetablecon center white">
+                <div id="day1" class="tahi">
                     <p class=tahi>Tahi</p>
+                </div>
+                <div id="day2" class="rua">
                     <p class=rua>Rua</p>
+                </div>
+                <div id="day3" class="toru">
                     <p class=toru>Toru</p>
+                </div>
+                <div id="day4" class="wha">
                     <p class=wha>Whā</p>
+                </div>
+                <div id="day5" class="rima">
                     <p class=rima>Rima</p>
+                </div>
+                <div id="day6" class="ono">
                     <p class=ono>Ono</p>
                 </div>
             </div>
             <!--Whānau time-->
-            <div>
-                <div class="timetablecon center blue">
-                    <p class=period>Whānau</p>
-                    <div class=period>
-                        <p class="pad3 period"></p>
-                        <p class="period in">8:45am</p>
-                    </div>
+            <div class="timetablecon center blue">
+                <p class=period>Whānau</p>
+                <div class=period>
+                    <p class="pad3 period"></p>
+                    <p class="period in">8:45am</p>
                 </div>
             </div>
             <!--period 1-->
-            <div>
-                <div class="timetablecon center white">
-                    <p class="period">period 1</p>
-                    <input id=tahi1 class=in value='' style="width: 54px">
-                    <input id=rua1 class=in value='' style= "width: 56px">
-                    <input id=toru1 class=in value='' style= "width: 54px">
-                    <input id=wha1 class=in value='' style= "width: 55px">
-                    <input id=rima1 class=in value='' style= "width: 54px">
-                    <input id=ono1 class=in value='' style= "width: 55px">
-                    <p class="period in increse"></p>
-                    <p class="period in">9:00am</p>
-                </div>
+            <div class="timetablecon center white">
+                <p class="period">period 1</p>
+                <input id=tahi1 class=in value='' style="width: 54px">
+                <input id=rua1 class=in value='' style= "width: 56px">
+                <input id=toru1 class=in value='' style= "width: 54px">
+                <input id=wha1 class=in value='' style= "width: 55px">
+                <input id=rima1 class=in value='' style= "width: 54px">
+                <input id=ono1 class=in value='' style= "width: 55px">
+                <p class="period in increse"></p>
+                <p class="period in">9:00am</p>
             </div>
             <!--period 2-->
-            <div>
-                <div class="timetablecon center white">
-                    <p class=period>period 2</p>
-                    <input id=tahi2 class=in value='' style= "width: 54px">
-                    <input id=rua2 class=in value='' style= "width: 56px">
-                    <input id=toru2 class=in value='' style= "width: 54px">
-                    <input id=wha2 class=in value='' style= "width: 55px">
-                    <input id=rima2 class=in value='' style= "width: 54px">
-                    <input id=ono2 class=in value='' style= "width: 55px">
-                    <p class="period in">10:05am</p>
-                </div>
+            <div class="timetablecon center white">
+                <p class=period>period 2</p>
+                <input id=tahi2 class=in value='' style= "width: 54px">
+                <input id=rua2 class=in value='' style= "width: 56px">
+                <input id=toru2 class=in value='' style= "width: 54px">
+                <input id=wha2 class=in value='' style= "width: 55px">
+                <input id=rima2 class=in value='' style= "width: 54px">
+                <input id=ono2 class=in value='' style= "width: 55px">
+                <p class="period in">10:05am</p>
             </div>
             <!--interval-->
-            <div>
-                <div class="timetablecon center blue">
-                    <p class=period>interval</p>
-                    <div class=period>
-                        <p class="pad period"></p>
-                        <p class="period in">11:10am</p>
-                    </div>
+            <div class="timetablecon center blue">
+                <p class=period>interval</p>
+                <div class=period>
+                    <p class="pad period"></p>
+                    <p class="period in">11:10am</p>
                 </div>
             </div>
             <!--period 3-->
-            <div>
-                <div class="timetablecon center white">
-                    <p class=period>period 3</p>
-                    <input id=tahi3 class=in value='' style= "width: 54px">
-                    <input id=rua3 class=in value='' style= "width: 56px">
-                    <input id=toru3 class=in value='' style= "width: 54px">
-                    <input id=wha3 class=in value='' style= "width: 55px">
-                    <input id=rima3 class=in value='' style= "width: 54px">
-                    <input id=ono3 class=in value='' style= "width: 55px">
-                    <p class="period in">11:30am</p>
-                </div>
+            <div class="timetablecon center white">
+                <p class=period>period 3</p>
+                <input id=tahi3 class=in value='' style= "width: 54px">
+                <input id=rua3 class=in value='' style= "width: 56px">
+                <input id=toru3 class=in value='' style= "width: 54px">
+                <input id=wha3 class=in value='' style= "width: 55px">
+                <input id=rima3 class=in value='' style= "width: 54px">
+                <input id=ono3 class=in value='' style= "width: 55px">
+                <p class="period in">11:30am</p>
             </div>
             <!--period 4-->
-            <div>
-                <div class="timetablecon center white">
-                    <p class="period">period 4</p>
-                    <input id=tahi4 class=in value='' style= "width: 54px">
-                    <input id=rua4 class=in value='' style= "width: 56px">
-                    <input id=toru4 class=in value='' style= "width: 54px">
-                    <input id=wha4 class=in value='' style= "width: 55px">
-                    <input id=rima4 class=in value='' style= "width: 54px">
-                    <input id=ono4 class=in value='' style= "width: 55px">
-                    <p class="period in monepix">12:35pm</p>
-                </div>
+            <div class="timetablecon center white">
+                <p class="period">period 4</p>
+                <input id=tahi4 class=in value='' style= "width: 54px">
+                <input id=rua4 class=in value='' style= "width: 56px">
+                <input id=toru4 class=in value='' style= "width: 54px">
+                <input id=wha4 class=in value='' style= "width: 55px">
+                <input id=rima4 class=in value='' style= "width: 54px">
+                <input id=ono4 class=in value='' style= "width: 55px">
+                <p class="period in monepix">12:35pm</p>
             </div>
             <!--lunch-->
-            <div>
-                <div class="timetablecon center blue">
-                    <p class=period>lunch</p>
-                    <p class="pad2 period"></p>
-                    <p class="period in increse"></p>
-                    <p class="period in">1:35pm</p>
-                </div>
+            <div class="timetablecon center blue">
+                <p class=period>lunch</p>
+                <p class="pad2 period"></p>
+                <p class="period in increse"></p>
+                <p class="period in">1:35pm</p>
             </div>
             <!--period 5-->
-            <div>
-                <div class="timetablecon center white">
-                    <p class=period>period 5</p>
-                    <input id=tahi5 class=in value='' style= "width: 54px">
-                    <input id=rua5 class=in value='' style= "width: 56px">
-                    <input id=toru5 class=in value='' style= "width: 54px">
-                    <input id=wha5 class=in value='' style= "width: 55px">
-                    <input id=rima5 class=in value='' style= "width: 54px">
-                    <input id=ono5 class=in value='' style= "width: 55px">
-                    <p class="period in increse"></p>
-                    <p class="period in">2:10pm</p>
-                </div>
+            <div class="timetablecon center white">
+                <p class=period>period 5</p>
+                <input id=tahi5 class=in value='' style= "width: 54px">
+                <input id=rua5 class=in value='' style= "width: 56px">
+                <input id=toru5 class=in value='' style= "width: 54px">
+                <input id=wha5 class=in value='' style= "width: 55px">
+                <input id=rima5 class=in value='' style= "width: 54px">
+                <input id=ono5 class=in value='' style= "width: 55px">
+                <p class="period in increse"></p>
+                <p class="period in">2:10pm</p>
             </div>
             <!--save button-->
             <div>
@@ -155,13 +152,10 @@
         </div>
         <!--timetable ends-->
         <!--Github link-->
-        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" class="bottomleft bluetext">Report bugs to the Github</a>
+        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" target="_blank" class="bottomleft bluetext">Report bugs to the Github</a>
         <!--day cycleing script-->
         <script>
             const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
-            // this is PAIN
-            // so much interal screaming
-            // i think i got this to work but as i say that there will likely be a bug and ill have to redo it all
             var old = new Date("2024-02-11 00:00")
             var today = new Date();
             var daysago = (Math.floor((today - old) / 1000 / 60 / 60 / 24 ));
@@ -183,12 +177,36 @@
                     numb = 1;
                 }
             }
-            // this is where the PAIN ends
             let day = days[numb];
             const plus = document.getElementById('plus');
             const mins = document.getElementById('mins');
             const h1 = document.getElementById('displayDay');
             h1.innerHTML = '<h1>'+day+'</h1>';
+            // highlighting the day
+            if (day == "Tahi") {
+                let day1 = document.getElementById("day1");
+                day1.classList = "tahi yellow"
+            }
+            else if (day == "Rua") {
+                let day2 = document.getElementById("day2");
+                day2.classList = "rua yellow"
+            }
+            else if (day == "Toru") {
+                let day3 = document.getElementById("day3");
+                day3.classList = "toru yellow"
+            }
+            else if (day == "Whā") {
+                let day4 = document.getElementById("day4");
+                day4.classList = "wha yellow"
+            }
+            else if (day == "Rima") {
+                let day5 = document.getElementById("day5");
+                day5.classList = "rima yellow"
+            }
+            else if (day == "Ono") {
+                let day6 = document.getElementById("day6");
+                day6.classList = "ono yellow"
+            }
         </script>
         <!--load timetable script-->
         <script>

@@ -14,7 +14,7 @@
     margin-left: -1pt;
 }
 body {
-    background-image: url('background.png');
+    background-image: url('img/background.png');
     background-size: cover;
 }
 .bottomleft {
@@ -99,11 +99,35 @@ button {
 }
 .down {
     margin-bottom: 10pt;
-    margin-top: 0pt;
+    margin-top: 0pt;;
 }
 a {
     font-size: 13pt;
 }
 input {
     text-align: center;
+}
+.yellow {
+    background-color: yellow;
+}
+.notices {
+    margin-left: 10px;
+    text-align: center;
+}
+.nobutton {
+    border: none;
+    background: none;
+    height: 10px;
+}
+.font {
+    font-family: sans-serif;
+}
+.help {
+    background-color: black;
+    color: white;
+    width: 500px;
+}
+.menu {
+    height: 30px;
+    width: 200px;
 }
