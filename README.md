@@ -23,7 +23,7 @@ v0.1.6 beta <br>
 
 v1.0.0 <br>
 +fixed a bug that was caused by me trying to make the code cleaner <br>
-+relesed to public
++released to public
 
 v1.0.1 <br>
 +valadated the html and css <br>
