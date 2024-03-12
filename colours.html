@@ -17,10 +17,10 @@
         <p>Remember to save</p>
         <!--color switching script-->
         <script>
-            const colorlist = ['red','darkorange','yellow','green','blue','cyan','purple','pink'];
+            const colorlist = ['red','darkorange','yellow','green','blue','cyan','purple','pink','none'];
             const daylist = ['null','tahi','rua','toru','wha','rima','ono'];
             const numblist = ['null','1','2','3','4','5']
-            let colornumb = 8;
+            let colornumb = 9;
             function colorswitch(color) {
                 colornumb = color;
             }
@@ -171,6 +171,7 @@
                 <button class="halfbutton" onclick="colorswitch(5)"><img class=center src="img/cyan.png" alt="cyan"></button>
                 <button class="halfbutton" onclick="colorswitch(6)"><img class=center src="img/purple.png" alt="purple"></button>
                 <button class="halfbutton" onclick="colorswitch(7)"><img class=center src="img/pink.png" alt="pink"></button>
+                <button class="halfbutton" onclick="colorswitch(7)"><img class=center src="img/none.png" alt="blank"></button>
             </div>
         </div>
         <!--timetable ends-->
