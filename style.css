@@ -129,5 +129,25 @@ input {
 }
 .menu {
     height: 30px;
-    width: 200px;
+}
+.colorbutton {
+    height: 20px;
+}
+.right {
+    float: right;
+}
+.savebutton {
+    width: 50px
+}
+.colorbuttons {
+    background-color: white;
+    width: 500px;
+    height: 45px;
+}
+.halfbutton {
+    margin: none;
+    border: 5px;
+    border-color: black;
+    background-color: none;
+    padding-bottom: none;
 }

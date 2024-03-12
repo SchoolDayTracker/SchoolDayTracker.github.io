@@ -13,13 +13,21 @@
     </head>
     <body>
         <!--Nav bar-->
-        <div id=menu class=menu>
-            <a class=notices href="https://darfield.school.nz/news/" target="_blank"><button>News</button></a>
-            <a class=notices href="https://darfield.school.kiwi/index.php/notices" target="_blank"><button>Notices</button></a>
-            <a class=notices href="colors.html"><button>Colors</button></a>
-            <a class=notices href="help.html"><button>Help</button></a>
-        </div>
-        <!--how the timetable is saved-->
+        <a href="index.html"><button class=nobutton><img height="30" src="img/close.png"></button></a>
+        <!--color switching script-->
+        <script>
+            const colorlist = ['red','orange','yellow','green','blue','cyan','purple','pink'];
+            const daylist = ['null','tahi','rua','toru','wha','rima','ono'];
+            const numblist = ['null','1','2','3','4','5']
+            let colornumb = 8;
+            function colorswitch(color) {
+                colornumb = color;
+            }
+            function colorset(a, b) {
+                document.getElementById(daylist[a] + numblist[b]).style.backgroundColor = colorlist[colornumb];
+            } 
+        </script>
+        <!--how the colours are saved-->
         <script>
             function save() {
                 let cookiebaker
@@ -28,11 +36,8 @@
                 let numb1 = 1;
                 let numb2 = 1;
                 for (let i = 0; i < 30; i++) {
-                    cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
-                    if (cookiebaker == '') {
-                        cookiebaker = " ";
-                    }
-                    document.cookie = tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
+                    cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).style.backgroundColor;
+                    document.cookie = "c" + tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
                     numb2++
                     if (numb2 == 6) {
                         numb2 = 1;
@@ -44,8 +49,11 @@
                 }
             }
         </script>
+        <h3 class="center">Colors</h3>
         <!--this it the day text-->
         <h1 id="displayDay" class=center></h1>
+        <!--color buttons-->
+        
         <!--timetable starts-->
         <div class="center timetable">
             <!--days-->
@@ -80,24 +88,24 @@
             <!--period 1-->
             <div class="timetablecon center white">
                 <p class="period">period 1</p>
-                <input id=tahi1 class=in value='' style="width: 54px">
-                <input id=rua1 class=in value='' style="width: 56px">
-                <input id=toru1 class=in value='' style="width: 54px">
-                <input id=wha1 class=in value='' style="width: 55px">
-                <input id=rima1 class=in value='' style="width: 54px">
-                <input id=ono1 class=in value='' style="width: 55px">
+                <button id=tahi1 class="in colorbutton" onclick='colorset(1,1)' style="width: 63px"></button>
+                <button id=rua1 class="in colorbutton" onclick='colorset(2,1)' style="width: 63px"></button>
+                <button id=toru1 class="in colorbutton" onclick='colorset(3,1)' style="width: 63px"></button>
+                <button id=wha1 class="in colorbutton" onclick='colorset(4,1)' style="width: 63px"></button>
+                <button id=rima1 class="in colorbutton" onclick='colorset(5,1)' style="width: 63px"></button>
+                <button id=ono1 class="in colorbutton" onclick='colorset(6,1)' style="width: 63px"></button>
                 <p class="period in increse"></p>
                 <p class="period in">9:00am</p>
             </div>
             <!--period 2-->
             <div class="timetablecon center white">
                 <p class=period>period 2</p>
-                <input id=tahi2 class=in value='' style="width: 54px">
-                <input id=rua2 class=in value='' style="width: 56px">
-                <input id=toru2 class=in value='' style="width: 54px">
-                <input id=wha2 class=in value='' style="width: 55px">
-                <input id=rima2 class=in value='' style="width: 54px">
-                <input id=ono2 class=in value='' style="width: 55px">
+                <button id=tahi2 class="in colorbutton" onclick='colorset(1,2)' style="width: 63px"></button>
+                <button id=rua2 class="in colorbutton" onclick='colorset(2,2)' style="width: 63px"></button>
+                <button id=toru2 class="in colorbutton" onclick='colorset(3,2)' style="width: 63px"></button>
+                <button id=wha2 class="in colorbutton" onclick='colorset(4,2)' style="width: 63px"></button>
+                <button id=rima2 class="in colorbutton" onclick='colorset(5,2)' style="width: 63px"></button>
+                <button id=ono2 class="in colorbutton" onclick='colorset(6,2)' style="width: 63px"></button>
                 <p class="period in">10:05am</p>
             </div>
             <!--interval-->
@@ -111,23 +119,23 @@
             <!--period 3-->
             <div class="timetablecon center white">
                 <p class=period>period 3</p>
-                <input id=tahi3 class=in value='' style="width: 54px">
-                <input id=rua3 class=in value='' style="width: 56px">
-                <input id=toru3 class=in value='' style="width: 54px">
-                <input id=wha3 class=in value='' style="width: 55px">
-                <input id=rima3 class=in value='' style="width: 54px">
-                <input id=ono3 class=in value='' style="width: 55px">
+                <button id=tahi3 class="in colorbutton" onclick='colorset(1,3)' style="width: 63px"></button>
+                <button id=rua3 class="in colorbutton" onclick='colorset(2,3)' style="width: 63px"></button>
+                <button id=toru3 class="in colorbutton" onclick='colorset(3,3)' style="width: 63px"></button>
+                <button id=wha3 class="in colorbutton" onclick='colorset(4,3)' style="width: 63px"></button>
+                <button id=rima3 class="in colorbutton" onclick='colorset(5,3)' style="width: 63px"></button>
+                <button id=ono3 class="in colorbutton" onclick='colorset(6,3)' style="width: 63px"></button>
                 <p class="period in">11:30am</p>
             </div>
             <!--period 4-->
             <div class="timetablecon center white">
                 <p class="period">period 4</p>
-                <input id=tahi4 class=in value='' style="width: 54px">
-                <input id=rua4 class=in value='' style="width: 56px">
-                <input id=toru4 class=in value='' style="width: 54px">
-                <input id=wha4 class=in value='' style="width: 55px">
-                <input id=rima4 class=in value='' style="width: 54px">
-                <input id=ono4 class=in value='' style="width: 55px">
+                <button id=tahi4 class="in colorbutton" onclick='colorset(1,4)' style="width: 63px"></button>
+                <button id=rua4 class="in colorbutton" onclick='colorset(2,4)' style="width: 63px"></button>
+                <button id=toru4 class="in colorbutton" onclick='colorset(3,4)' style="width: 63px"></button>
+                <button id=wha4 class="in colorbutton" onclick='colorset(4,4)' style="width: 63px"></button>
+                <button id=rima4 class="in colorbutton" onclick='colorset(5,4)' style="width: 63px"></button>
+                <button id=ono4 class="in colorbutton" onclick='colorset(6,4)' style="width: 63px"></button>
                 <p class="period in monepix">12:35pm</p>
             </div>
             <!--lunch-->
@@ -140,18 +148,28 @@
             <!--period 5-->
             <div class="timetablecon center white">
                 <p class=period>period 5</p>
-                <input id=tahi5 class=in value='' style="width: 54px">
-                <input id=rua5 class=in value='' style="width: 56px">
-                <input id=toru5 class=in value='' style="width: 54px">
-                <input id=wha5 class=in value='' style="width: 55px">
-                <input id=rima5 class=in value='' style="width: 54px">
-                <input id=ono5 class=in value='' style="width: 55px">
+                <button id=tahi5 class="in colorbutton" onclick='colorset(1,5)' style="width: 63px"></button>
+                <button id=rua5 class="in colorbutton" onclick='colorset(2,5)' style="width: 63px"></button>
+                <button id=toru5 class="in colorbutton" onclick='colorset(3,5)' style="width: 63px"></button>
+                <button id=wha5 class="in colorbutton" onclick='colorset(4,5)' style="width: 63px"></button>
+                <button id=rima5 class="in colorbutton" onclick='colorset(5,5)' style="width: 63px"></button>
+                <button id=ono5 class="in colorbutton" onclick='colorset(6,5)' style="width: 63px"></button>
                 <p class="period in increse"></p>
                 <p class="period in">2:10pm</p>
             </div>
             <!--save button-->
-            <div>
+            <div class="center savebutton">
                 <button id="save" type="button" onclick="save()">save</button>
+            </div>
+            <div class="center colorbuttons">
+                <button class="halfbutton" onclick="colorswitch(0)"><img class=center src="img/red.png" alt="red"></button>
+                <button class="halfbutton" onclick="colorswitch(1)"><img class=center src="img/orange.png" alt="orange"></button>
+                <button class="halfbutton" onclick="colorswitch(2)"><img class=center src="img/yellow.png" alt="yellow"></button>
+                <button class="halfbutton" onclick="colorswitch(3)"><img class=center src="img/green.png" alt="green"></button>
+                <button class="halfbutton" onclick="colorswitch(4)"><img class=center src="img/blue.png" alt="blue"></button>
+                <button class="halfbutton" onclick="colorswitch(5)"><img class=center src="img/cyan.png" alt="cyan"></button>
+                <button class="halfbutton" onclick="colorswitch(6)"><img class=center src="img/purple.png" alt="purple"></button>
+                <button class="halfbutton" onclick="colorswitch(7)"><img class=center src="img/pink.png" alt="pink"></button>
             </div>
         </div>
         <!--timetable ends-->
@@ -226,7 +244,7 @@
                     document.getElementById(name).style.backgroundColor = value;
                 }
                 else {
-                    document.getElementById(name).value = value;
+                    document.getElementById(name).innerHTML = value;
                 }
                 number++
             }
