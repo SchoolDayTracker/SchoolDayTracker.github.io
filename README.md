@@ -34,3 +34,7 @@ v1.1.0 <br>
 +added a help page <br>
 +added a link to the notices <br>
 +got the current day to be highlighted
+
+v1.2.0 <br>
++added new info to the help page <br>
++added a custom colours to the timetable <br>
