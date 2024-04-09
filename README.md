@@ -38,3 +38,6 @@ v1.1.0 <br>
 v1.2.0 <br>
 +added new info to the help page <br>
 +added a custom colours to the timetable <br>
+
+v1.3.0 <br>
++changed the font

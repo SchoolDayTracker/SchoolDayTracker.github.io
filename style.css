@@ -5,17 +5,24 @@
 }
 .timetablecon {
     height: 22px;
-    width: 520px;
+    width: 530px;
 }
 .ponepix {
     margin-right: 1pt;
 }
+plonepix {
+    margin-left: 1px;
+}
 .monepix {
     margin-left: -1pt;
+}
+.mronepix {
+    margin-right: -1px;
 }
 body {
     background-image: url('img/background.png');
     background-size: cover;
+    font-family: sans-serif;
 }
 .bottomleft {
     position: fixed;
@@ -32,13 +39,41 @@ body {
     margin-left: 310pt;
 }
 .pad3 {
-    margin-left: 303pt
+    margin-left: 303pt;
 }
 .white {
     background-color: white;
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
 }
 .blue {
     background-color: turquoise;
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
+}
+.top {
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 3px;
+    border-bottom: 0px;
+    border-color: black;
+    border-style: solid;
+}
+.bottom {
+    border-left: 3px;
+    border-right: 3px;
+    border-top: 0px;
+    border-bottom: 3px;
+    border-color: black;
+    border-style: solid;
 }
 .period {
     display: inline-block;
@@ -99,7 +134,7 @@ button {
 }
 .down {
     margin-bottom: 10pt;
-    margin-top: 0pt;;
+    margin-top: 0pt;
 }
 a {
     font-size: 13pt;
@@ -113,6 +148,16 @@ input {
 .notices {
     margin-left: 10px;
     text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    text-decoration: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: turquoise;
+    color: black;
 }
 .nobutton {
     border: none;
@@ -137,11 +182,11 @@ input {
     float: right;
 }
 .savebutton {
-    width: 50px
+    width: 50px;
 }
 .colorbuttons {
     background-color: white;
-    width: 500px;
+    width: 510px;
     height: 45px;
 }
 .halfbutton {
@@ -150,4 +195,7 @@ input {
     border-color: black;
     background-color: none;
     padding-bottom: none;
+}
+.timetable {
+    color: black;
 }
