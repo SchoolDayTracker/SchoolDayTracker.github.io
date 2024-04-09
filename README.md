@@ -40,4 +40,6 @@ v1.2.0 <br>
 +added a custom colours to the timetable <br>
 
 v1.3.0 <br>
-+changed the font
++changed the font <br>
++added a border around the timetable <br>
++changed the navbar
