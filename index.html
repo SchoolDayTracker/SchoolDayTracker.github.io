@@ -13,224 +13,230 @@
         <title>School Day Tracker</title>
     </head>
     <body>
-        <!--Nav bar-->
-        <div id=menu class=menu>
-            <a class=notices href="https://darfield.school.nz/news/" target="_blank"><button>News</button></a>
-            <a class=notices href="https://darfield.school.kiwi/index.php/notices" target="_blank"><button>Notices</button></a>
-            <a class=notices href="colours.html"><button>Colours</button></a>
-            <a class=notices href="help.html"><button>Help</button></a>
-        </div>
-        <p>Remember to save</p>
-        <!--how the timetable is saved-->
-        <script>
-            function save() {
-                let cookiebaker
-                const tahitoono = ["null","tahi","rua","toru","wha","rima","ono"];
-                const onetosix = ["null","1","2","3","4","5","6"];
-                let numb1 = 1;
-                let numb2 = 1;
-                for (let i = 0; i < 30; i++) {
-                    cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
-                    if (cookiebaker == '') {
-                        cookiebaker = " ";
-                    }
-                    document.cookie = tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
-                    numb2++
-                    if (numb2 == 6) {
-                        numb2 = 1;
-                        numb1++;
-                        if (numb1 == 7) {
-                            break;
+        <div class="border">
+            <!--Nav bar-->
+            <div id=menu class=menu>
+                <a class=notices href="https://darfield.school.nz/news/" target="_blank">News</a>
+                <a class=notices href="https://darfield.school.kiwi/index.php/notices" target="_blank">Notices</a>
+                <a class=notices href="colours.html">Colours</a>
+                <a class=notices href="help.html">Help</a>
+            </div>
+            <p>Remember to save</p>
+            <!--how the timetable is saved-->
+            <script>
+                function save() {
+                    let cookiebaker
+                    const tahitoono = ["null","tahi","rua","toru","wha","rima","ono"];
+                    const onetosix = ["null","1","2","3","4","5","6"];
+                    let numb1 = 1;
+                    let numb2 = 1;
+                    for (let i = 0; i < 30; i++) {
+                        cookiebaker = document.getElementById(tahitoono[numb1] + onetosix[numb2]).value;
+                        if (cookiebaker == '') {
+                            cookiebaker = " ";
+                        }
+                        document.cookie = tahitoono[numb1] + onetosix[numb2] + "=" + cookiebaker + ";";
+                        numb2++
+                        if (numb2 == 6) {
+                            numb2 = 1;
+                            numb1++;
+                            if (numb1 == 7) {
+                                break;
+                            }
                         }
                     }
                 }
-            }
-        </script>
-        <!--this it the day text-->
-        <h1 id="displayDay" class=center></h1>
-        <!--timetable starts-->
-        <div class="center timetable">
-            <!--days-->
-            <div class="timetablecon center white">
-                <div id="day1" class="tahi">
-                    <p class=tahi>Tahi</p>
+            </script>
+            <!--this it the day text-->
+            <h1 id="displayDay" class=center></h1>
+            <!--timetable starts-->
+            <div class="center timetable">
+                <!--days-->
+                <div class="timetablecon top center white">
+                    <div id="day1" class="tahi">
+                        <p class=tahi>Tahi</p>
+                    </div>
+                    <div id="day2" class="rua">
+                        <p class=rua>Rua</p>
+                    </div>
+                    <div id="day3" class="toru">
+                        <p class=toru>Toru</p>
+                    </div>
+                    <div id="day4" class="wha">
+                        <p class=wha>Whā</p>
+                    </div>
+                    <div id="day5" class="rima">
+                        <p class=rima>Rima</p>
+                    </div>
+                    <div id="day6" class="ono">
+                        <p class=ono>Ono</p>
+                    </div>
                 </div>
-                <div id="day2" class="rua">
-                    <p class=rua>Rua</p>
+                <!--Whānau time-->
+                <div class="timetablecon center blue">
+                    <p class=period>Whānau</p>
+                    <div class=period>
+                        <p class="pad3 period"></p>
+                        <p class="period in">8:45am</p>
+                    </div>
                 </div>
-                <div id="day3" class="toru">
-                    <p class=toru>Toru</p>
+                <!--period 1-->
+                <div class="timetablecon center white">
+                    <p class="period">period 1</p>
+                    <input id=tahi1 class=in value='' style="width: 54px">
+                    <input id=rua1 class=in value='' style="width: 56px">
+                    <input id=toru1 class=in value='' style="width: 54px">
+                    <input id=wha1 class=in value='' style="width: 55px">
+                    <input id=rima1 class=in value='' style="width: 54px">
+                    <input id=ono1 class=in value='' style="width: 55px">
+                    <p class="period in increse"></p>
+                    <p class="period in">9:00am</p>
                 </div>
-                <div id="day4" class="wha">
-                    <p class=wha>Whā</p>
+                <!--period 2-->
+                <div class="timetablecon center white">
+                    <p class="period ponepix">period 2</p>
+                    <input id=tahi2 class=in value='' style="width: 54px">
+                    <input id=rua2 class=in value='' style="width: 56px">
+                    <input id=toru2 class=in value='' style="width: 54px">
+                    <input id=wha2 class=in value='' style="width: 55px">
+                    <input id=rima2 class=in value='' style="width: 54px">
+                    <input id=ono2 class="in" value='' style="width: 55px">
+                    <p class="period in">10:05am</p>
                 </div>
-                <div id="day5" class="rima">
-                    <p class=rima>Rima</p>
+                <!--interval-->
+                <div class="timetablecon center blue">
+                    <p class=period>interval</p>
+                    <div class=period>
+                        <p class="pad period"></p>
+                        <p class="period in">11:10am</p>
+                    </div>
                 </div>
-                <div id="day6" class="ono">
-                    <p class=ono>Ono</p>
+                <!--period 3-->
+                <div class="timetablecon center white">
+                    <p class=period>period 3</p>
+                    <input id=tahi3 class=in value='' style="width: 54px">
+                    <input id=rua3 class=in value='' style="width: 56px">
+                    <input id=toru3 class=in value='' style="width: 54px">
+                    <input id=wha3 class=in value='' style="width: 55px">
+                    <input id=rima3 class=in value='' style="width: 54px">
+                    <input id=ono3 class=in value='' style="width: 55px">
+                    <p class="period in">11:30am</p>
+                </div>
+                <!--period 4-->
+                <div class="timetablecon center white">
+                    <p class="period">period 4</p>
+                    <input id=tahi4 class=in value='' style="width: 54px">
+                    <input id=rua4 class=in value='' style="width: 56px">
+                    <input id=toru4 class=in value='' style="width: 54px">
+                    <input id=wha4 class=in value='' style="width: 55px">
+                    <input id=rima4 class=in value='' style="width: 54px">
+                    <input id=ono4 class=in value='' style="width: 55px">
+                    <p class="period in monepix">12:35pm</p>
+                </div>
+                <!--lunch-->
+                <div class="timetablecon center blue">
+                    <p class=period>lunch</p>
+                    <p class="pad2 period"></p>
+                    <p class="period in increse"></p>
+                    <p class="period in">1:35pm</p>
+                </div>
+                <!--period 5-->
+                <div class="timetablecon bottom center white">
+                    <p class=period>period 5</p>
+                    <input id=tahi5 class=in value='' style="width: 54px">
+                    <input id=rua5 class=in value='' style="width: 56px">
+                    <input id=toru5 class=in value='' style="width: 54px">
+                    <input id=wha5 class=in value='' style="width: 55px">
+                    <input id=rima5 class=in value='' style="width: 54px">
+                    <input id=ono5 class=in value='' style="width: 55px">
+                    <p class="period in increse"></p>
+                    <p class="period in">2:10pm</p>
+                </div>
+                <!--save button-->
+                <div>
+                    <button id="save" type="button" onclick="save()">save</button>
                 </div>
             </div>
-            <!--Whānau time-->
-            <div class="timetablecon center blue">
-                <p class=period>Whānau</p>
-                <div class=period>
-                    <p class="pad3 period"></p>
-                    <p class="period in">8:45am</p>
-                </div>
-            </div>
-            <!--period 1-->
-            <div class="timetablecon center white">
-                <p class="period">period 1</p>
-                <input id=tahi1 class=in value='' style="width: 54px">
-                <input id=rua1 class=in value='' style="width: 56px">
-                <input id=toru1 class=in value='' style="width: 54px">
-                <input id=wha1 class=in value='' style="width: 55px">
-                <input id=rima1 class=in value='' style="width: 54px">
-                <input id=ono1 class=in value='' style="width: 55px">
-                <p class="period in increse"></p>
-                <p class="period in">9:00am</p>
-            </div>
-            <!--period 2-->
-            <div class="timetablecon center white">
-                <p class=period>period 2</p>
-                <input id=tahi2 class=in value='' style="width: 54px">
-                <input id=rua2 class=in value='' style="width: 56px">
-                <input id=toru2 class=in value='' style="width: 54px">
-                <input id=wha2 class=in value='' style="width: 55px">
-                <input id=rima2 class=in value='' style="width: 54px">
-                <input id=ono2 class=in value='' style="width: 55px">
-                <p class="period in">10:05am</p>
-            </div>
-            <!--interval-->
-            <div class="timetablecon center blue">
-                <p class=period>interval</p>
-                <div class=period>
-                    <p class="pad period"></p>
-                    <p class="period in">11:10am</p>
-                </div>
-            </div>
-            <!--period 3-->
-            <div class="timetablecon center white">
-                <p class=period>period 3</p>
-                <input id=tahi3 class=in value='' style="width: 54px">
-                <input id=rua3 class=in value='' style="width: 56px">
-                <input id=toru3 class=in value='' style="width: 54px">
-                <input id=wha3 class=in value='' style="width: 55px">
-                <input id=rima3 class=in value='' style="width: 54px">
-                <input id=ono3 class=in value='' style="width: 55px">
-                <p class="period in">11:30am</p>
-            </div>
-            <!--period 4-->
-            <div class="timetablecon center white">
-                <p class="period">period 4</p>
-                <input id=tahi4 class=in value='' style="width: 54px">
-                <input id=rua4 class=in value='' style="width: 56px">
-                <input id=toru4 class=in value='' style="width: 54px">
-                <input id=wha4 class=in value='' style="width: 55px">
-                <input id=rima4 class=in value='' style="width: 54px">
-                <input id=ono4 class=in value='' style="width: 55px">
-                <p class="period in monepix">12:35pm</p>
-            </div>
-            <!--lunch-->
-            <div class="timetablecon center blue">
-                <p class=period>lunch</p>
-                <p class="pad2 period"></p>
-                <p class="period in increse"></p>
-                <p class="period in">1:35pm</p>
-            </div>
-            <!--period 5-->
-            <div class="timetablecon center white">
-                <p class=period>period 5</p>
-                <input id=tahi5 class=in value='' style="width: 54px">
-                <input id=rua5 class=in value='' style="width: 56px">
-                <input id=toru5 class=in value='' style="width: 54px">
-                <input id=wha5 class=in value='' style="width: 55px">
-                <input id=rima5 class=in value='' style="width: 54px">
-                <input id=ono5 class=in value='' style="width: 55px">
-                <p class="period in increse"></p>
-                <p class="period in">2:10pm</p>
-            </div>
-            <!--save button-->
-            <div>
-                <button id="save" type="button" onclick="save()">save</button>
-            </div>
+            <!--Github link-->
+            <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" target="_blank" class="bottomleft bluetext">Report bugs to the Github</a>
+            <!--this is where i would put the iframe notices if i could-->
+            <!--day cycleing script-->
+            <script>
+                const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
+                var old = new Date("2024-02-11 00:00");
+                var today = new Date();
+                function update() {
+                    var today = new Date();
+                }
+                var daysago = (Math.floor((today - old) / 1000 / 60 / 60 / 24 ));
+                let weekends = (Math.floor(daysago / 7));
+                let numb = 1;
+                let a = 1;
+                while (a == 1) {
+                    if (weekends == 0){
+                        break;
+                    }
+                    weekends = weekends - 1;
+                    daysago = daysago - 2;
+                }
+                daysago = daysago - 3; // ____CHANGE THIS ON HOLLADAYS____
+                numb = numb - 1;
+                for (let i = 0; i < daysago; i++) {
+                    numb = numb + 1;
+                    if (numb == 7) {
+                        numb = 1;
+                    }
+                }
+                setInterval(update, 1000);
+                let day = days[numb];
+                const plus = document.getElementById('plus');
+                const mins = document.getElementById('mins');
+                const h1 = document.getElementById('displayDay');
+                h1.innerHTML = '<h1>'+day+'</h1>';
+                // highlighting the day
+                if (day == "Tahi") {
+                    let day1 = document.getElementById("day1");
+                    day1.classList = "tahi yellow"
+                }
+                else if (day == "Rua") {
+                    let day2 = document.getElementById("day2");
+                    day2.classList = "rua yellow"
+                }
+                else if (day == "Toru") {
+                    let day3 = document.getElementById("day3");
+                    day3.classList = "toru yellow"
+                }
+                else if (day == "Whā") {
+                    let day4 = document.getElementById("day4");
+                    day4.classList = "wha yellow"
+                }
+                else if (day == "Rima") {
+                    let day5 = document.getElementById("day5");
+                    day5.classList = "rima yellow"
+                }
+                else if (day == "Ono") {
+                    let day6 = document.getElementById("day6");
+                    day6.classList = "ono yellow"
+                }
+            </script>
+            <!--load timetable script-->
+            <script>
+                let cookies = document.cookie.split(';');
+                let number = 0;
+                for (let i = 0; i < 60; i++) {
+                    let [name, value] = cookies[number].split('=');
+                    name = name.replace(' ','')
+                    let namelist = name.split('');
+                    if (namelist[0] == 'c') {
+                        name = name.replace('c','')
+                        document.getElementById(name).style.backgroundColor = value;
+                    }
+                    else {
+                        document.getElementById(name).value = value;
+                    }
+                    number++
+                }
+            </script>
         </div>
-        <!--timetable ends-->
-        <!--Github link-->
-        <a href="https://github.com/SchoolDayTracker/SchoolDayTracker.github.io" target="_blank" class="bottomleft bluetext">Report bugs to the Github</a>
-        <!--day cycleing script-->
-        <script>
-            const days = ["null", "Tahi", "Rua", "Toru", "Whā", "Rima", "Ono", "null"];
-            var old = new Date("2024-02-11 00:00")
-            var today = new Date();
-            var daysago = (Math.floor((today - old) / 1000 / 60 / 60 / 24 ));
-            let weekends = (Math.floor(daysago / 7));
-            let numb = 1;
-            let a = 1;
-            while (a == 1) {
-                if (weekends == 0){
-                    break;
-                }
-                weekends = weekends - 1;
-                daysago = daysago - 2;
-            }
-            daysago = daysago - 3; // ____CHANGE THIS ON HOLLADAYS____
-            numb = numb - 1;
-            for (let i = 0; i < daysago; i++) {
-                numb = numb + 1;
-                if (numb == 7) {
-                    numb = 1;
-                }
-            }
-            let day = days[numb];
-            const plus = document.getElementById('plus');
-            const mins = document.getElementById('mins');
-            const h1 = document.getElementById('displayDay');
-            h1.innerHTML = '<h1>'+day+'</h1>';
-            // highlighting the day
-            if (day == "Tahi") {
-                let day1 = document.getElementById("day1");
-                day1.classList = "tahi yellow"
-            }
-            else if (day == "Rua") {
-                let day2 = document.getElementById("day2");
-                day2.classList = "rua yellow"
-            }
-            else if (day == "Toru") {
-                let day3 = document.getElementById("day3");
-                day3.classList = "toru yellow"
-            }
-            else if (day == "Whā") {
-                let day4 = document.getElementById("day4");
-                day4.classList = "wha yellow"
-            }
-            else if (day == "Rima") {
-                let day5 = document.getElementById("day5");
-                day5.classList = "rima yellow"
-            }
-            else if (day == "Ono") {
-                let day6 = document.getElementById("day6");
-                day6.classList = "ono yellow"
-            }
-        </script>
-        <!--load timetable script-->
-        <script>
-            let cookies = document.cookie.split(';');
-            let number = 0;
-            for (let i = 0; i < 60; i++) {
-                let [name, value] = cookies[number].split('=');
-                name = name.replace(' ','')
-                let namelist = name.split('');
-                if (namelist[0] == 'c') {
-                    name = name.replace('c','')
-                    document.getElementById(name).style.backgroundColor = value;
-                }
-                else {
-                    document.getElementById(name).value = value;
-                }
-                number++
-            }
-        </script>
     </body>
 </html>
